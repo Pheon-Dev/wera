@@ -26,10 +26,10 @@ const Home = ({ navigation }) => {
         point: 200
     }
 
-    const bookOtherWordsForHome = {
+    const jobOtherWordsForHome = {
         id: 1,
-        bookName: "Other Words For Home",
-        bookCover: images.otherWordsForHome,
+        jobName: "Other Words For Home",
+        jobCover: images.otherWordsForHome,
         rating: 4.5,
         language: "Eng",
         pageNo: 341,
@@ -43,10 +43,10 @@ const Home = ({ navigation }) => {
         navTintColor: "#000"
     }
 
-    const bookTheMetropolis = {
+    const jobTheMetropolis = {
         id: 2,
-        bookName: "The Metropolis",
-        bookCover: images.theMetropolist,
+        jobName: "The Metropolis",
+        jobCover: images.theMetropolist,
         rating: 4.1,
         language: "Eng",
         pageNo: 272,
@@ -60,10 +60,10 @@ const Home = ({ navigation }) => {
         navTintColor: "#000"
     }
 
-    const bookTheTinyDragon = {
+    const jobTheTinyDragon = {
         id: 3,
-        bookName: "The Tiny Dragon",
-        bookCover: images.theTinyDragon,
+        jobName: "The Tiny Dragon",
+        jobCover: images.theTinyDragon,
         rating: 3.5,
         language: "Eng",
         pageNo: 110,
@@ -72,26 +72,26 @@ const Home = ({ navigation }) => {
             "Drama", "Adventure", "Romance"
         ],
         readed: "13k",
-        description: "This sketchbook for kids is the perfect tool to improve your drawing skills! Designed to encourage kids around the world to express their uniqueness through drawing, sketching or doodling, this sketch book is filled with 110 high quality blank pages for creations. Add some fun markers, crayons, and art supplies and you have the perfect, easy gift for kids!",
+        description: "This sketchjob for kids is the perfect tool to improve your drawing skills! Designed to encourage kids around the world to express their uniqueness through drawing, sketching or doodling, this sketch job is filled with 110 high quality blank pages for creations. Add some fun markers, crayons, and art supplies and you have the perfect, easy gift for kids!",
         backgroundColor: "rgba(119,77,143,0.9)",
         navTintColor: "#FFF"
     }
 
     const myJobsData = [
         {
-            ...bookOtherWordsForHome,
+            ...jobOtherWordsForHome,
             completion: "75%",
             lastRead: "3d 5h",
 
         },
         {
-            ...bookTheMetropolis,
+            ...jobTheMetropolis,
             completion: "23%",
             lastRead: "10d 5h",
 
         },
         {
-            ...bookTheTinyDragon,
+            ...jobTheTinyDragon,
             completion: "10%",
             lastRead: "1d 2h",
 
@@ -102,22 +102,22 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             categoryName: "Best Seller",
-            books: [
-                bookOtherWordsForHome, bookTheMetropolis, bookTheTinyDragon
+            jobs: [
+                jobOtherWordsForHome, jobTheMetropolis, jobTheTinyDragon
             ]
         },
         {
             id: 2,
             categoryName: "The Latest",
-            books: [
-                bookTheMetropolis
+            jobs: [
+                jobTheMetropolis
             ]
         },
         {
             id: 3,
             categoryName: "Coming Soon",
-            books: [
-                bookTheTinyDragon
+            jobs: [
+                jobTheTinyDragon
             ]
         },
     ]
@@ -261,12 +261,12 @@ const Home = ({ navigation }) => {
                         marginRight: SIZES.radius
                     }}
                     onPress={() => navigation.navigate("JobDetail", {
-                        book: item
+                        job: item
                     })}
                 >
                     {/* Job Cover */}
                     <Image
-                        source={item.bookCover}
+                        source={item.jobCover}
                         resizeMode="cover"
                         style={{
                             width: 180,
@@ -363,12 +363,12 @@ const Home = ({ navigation }) => {
     }
 
     function renderCategoryData() {
-        var books = []
+        var jobs = []
 
         let selectedCategoryJobs = categories.filter(a => a.id == selectedCategory)
 
         if (selectedCategoryJobs.length > 0) {
-            books = selectedCategoryJobs[0].books
+            jobs = selectedCategoryJobs[0].jobs
         }
 
         const renderItem = ({ item }) => {
@@ -377,12 +377,12 @@ const Home = ({ navigation }) => {
                     <TouchableOpacity
                         style={{ flex: 1, flexDirection: 'row' }}
                         onPress={() => navigation.navigate("JobDetail", {
-                            book: item
+                            job: item
                         })}
                     >
                         {/* Job Cover */}
                         <Image
-                            source={item.bookCover}
+                            source={item.jobCover}
                             resizeMode="cover"
                             style={{ width: 100, height: 150, borderRadius: 10 }}
                         />
@@ -390,7 +390,7 @@ const Home = ({ navigation }) => {
                         <View style={{ flex: 1, marginLeft: SIZES.radius }}>
                             {/* Job name and author */}
                             <View>
-                                <Text style={{ paddingRight: SIZES.padding, ...FONTS.h2, color: COLORS.white }}>{item.bookName}</Text>
+                                <Text style={{ paddingRight: SIZES.padding, ...FONTS.h2, color: COLORS.white }}>{item.jobName}</Text>
                                 <Text style={{ ...FONTS.h3, color: COLORS.lightGray }}>{item.author}</Text>
                             </View>
 
@@ -465,7 +465,7 @@ const Home = ({ navigation }) => {
         return (
             <View style={{ flex: 1, marginTop: SIZES.radius, paddingLeft: SIZES.padding }}>
                 <FlatList
-                    data={books}
+                    data={jobs}
                     renderItem={renderItem}
                     keyExtractor={item => `${item.id}`}
                     showsVerticalScrollIndicator={false}

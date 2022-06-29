@@ -20,7 +20,7 @@ const LineDivider = () => {
 
 const JobDetail = ({ route, navigation }) => {
 
-    const [book, setJob] = React.useState(null);
+    const [job, setJob] = React.useState(null);
 
     const [scrollViewWholeHeight, setScrollViewWholeHeight] = React.useState(1);
     const [scrollViewVisibleHeight, setScrollViewVisibleHeight] = React.useState(0);
@@ -28,15 +28,15 @@ const JobDetail = ({ route, navigation }) => {
     const indicator = new Animated.Value(0);
 
     React.useEffect(() => {
-        let { book } = route.params;
-        setJob(book)
-    }, [book])
+        let { job } = route.params;
+        setJob(job)
+    }, [job])
 
     function renderJobInfoSection() {
         return (
             <View style={{ flex: 1 }}>
                 <ImageBackground
-                    source={book.bookCover}
+                    source={job.jobCover}
                     resizeMode="cover"
                     style={{
                         position: 'absolute',
@@ -55,7 +55,7 @@ const JobDetail = ({ route, navigation }) => {
                         right: 0,
                         bottom: 0,
                         left: 0,
-                        backgroundColor: book.backgroundColor
+                        backgroundColor: job.backgroundColor
                     }}
                 >
                 </View>
@@ -72,13 +72,13 @@ const JobDetail = ({ route, navigation }) => {
                             style={{
                                 width: 25,
                                 height: 25,
-                                tintColor: book.navTintColor
+                                tintColor: job.navTintColor
                             }}
                         />
                     </TouchableOpacity>
 
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={{ ...FONTS.h3, color: book.navTintColor }}>Job Detail</Text>
+                        <Text style={{ ...FONTS.h3, color: job.navTintColor }}>Job Detail</Text>
                     </View>
 
                     <TouchableOpacity
@@ -91,7 +91,7 @@ const JobDetail = ({ route, navigation }) => {
                             style={{
                                 width: 30,
                                 height: 30,
-                                tintColor: book.navTintColor,
+                                tintColor: job.navTintColor,
                                 alignSelf: 'flex-end'
                             }}
                         />
@@ -101,7 +101,7 @@ const JobDetail = ({ route, navigation }) => {
                 {/* Job Cover */}
                 <View style={{ flex: 5, paddingTop: SIZES.padding2, alignItems: 'center' }}>
                     <Image
-                        source={book.bookCover}
+                        source={job.jobCover}
                         resizeMode="contain"
                         style={{
                             flex: 1,
@@ -113,8 +113,8 @@ const JobDetail = ({ route, navigation }) => {
 
                 {/* Job Name and Author */}
                 <View style={{ flex: 1.8, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ ...FONTS.h2, color: book.navTintColor }}>{book.bookName}</Text>
-                    <Text style={{ ...FONTS.body3, color: book.navTintColor }}>{book.author}</Text>
+                    <Text style={{ ...FONTS.h2, color: job.navTintColor }}>{job.jobName}</Text>
+                    <Text style={{ ...FONTS.body3, color: job.navTintColor }}>{job.author}</Text>
                 </View>
 
                 {/* Job Info */}
@@ -129,7 +129,7 @@ const JobDetail = ({ route, navigation }) => {
                 >
                     {/* Rating */}
                     <View style={{ flex: 1, alignItems: 'center' }}>
-                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{book.rating}</Text>
+                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.rating}</Text>
                         <Text style={{ ...FONTS.body4, color: COLORS.white }}>Rating</Text>
                     </View>
 
@@ -137,7 +137,7 @@ const JobDetail = ({ route, navigation }) => {
 
                     {/* Pages */}
                     <View style={{ flex: 1, paddingHorizontal: SIZES.radius, alignItems: 'center' }}>
-                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{book.pageNo}</Text>
+                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.pageNo}</Text>
                         <Text style={{ ...FONTS.body4, color: COLORS.white }}>Number of Page</Text>
                     </View>
 
@@ -145,7 +145,7 @@ const JobDetail = ({ route, navigation }) => {
 
                     {/* Language */}
                     <View style={{ flex: 1, alignItems: 'center' }}>
-                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{book.language}</Text>
+                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.language}</Text>
                         <Text style={{ ...FONTS.body4, color: COLORS.white }}>Language</Text>
                     </View>
                 </View>
@@ -196,7 +196,7 @@ const JobDetail = ({ route, navigation }) => {
                     )}
                 >
                     <Text style={{ ...FONTS.h2, color: COLORS.white, marginBottom: SIZES.padding }}>Description</Text>
-                    <Text style={{ ...FONTS.body2, color: COLORS.lightGray }}>{book.description}</Text>
+                    <Text style={{ ...FONTS.body2, color: COLORS.lightGray }}>{job.description}</Text>
                 </ScrollView>
             </View>
         )
@@ -248,7 +248,7 @@ const JobDetail = ({ route, navigation }) => {
         )
     }
 
-    if (book) {
+    if (job) {
         return (
             <View style={{ flex: 1, backgroundColor: COLORS.black }}>
                 {/* Job Cover Section */}
