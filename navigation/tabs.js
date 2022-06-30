@@ -9,17 +9,13 @@ const Tab = createBottomTabNavigator();
 const Tabs = () => {
   return (
     <Tab.Navigator
-      style={{
-        height: "10%",
-        backgroundColor: COLORS.black,
-      }}
-      // tabBarOptions={tabOptions}
       screenOptions={({ route }) => ({
-        showLabel: false,
         style: {
           height: "10%",
           backgroundColor: COLORS.black,
         },
+        headerShown: false,
+        tabBarShowLabel: false,
         tabBarIcon: ({ focused }) => {
           const tintColor = focused ? COLORS.white : COLORS.gray;
 
