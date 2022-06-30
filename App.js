@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
-import { JobDetail } from "./screens/";
+import { JobDetail } from "./screens";
 import Tabs from "./navigation/tabs";
 import { useFonts } from 'expo-font';
 
