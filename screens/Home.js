@@ -32,12 +32,12 @@ const Home = ({ navigation }) => {
         jobCover: images.img_one,
         rating: 4.5,
         language: "Eng/Kis/Gik",
-        pageNo: 34,
-        author: "Jasmine Wangui",
+        clients: 34,
+        names: "Jasmine Wangui",
         genre: [
             "Maid", "Janitor", "Cook"
         ],
-        readed: "12k",
+        bid: "12k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
         backgroundColor: "rgba(240,240,232,0.9)",
         navTintColor: "#000"
@@ -49,12 +49,12 @@ const Home = ({ navigation }) => {
         jobCover: images.img_two,
         rating: 4.1,
         language: "Eng/Kis/Kal",
-        pageNo: 27,
-        author: "Jennifer Tanui",
+        clients: 27,
+        names: "Jennifer Tanui",
         genre: [
             "Watering", "Weeding"
         ],
-        readed: "13k",
+        bid: "13k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
         backgroundColor: "rgba(247,239,219,0.9)",
         navTintColor: "#000"
@@ -66,12 +66,12 @@ const Home = ({ navigation }) => {
         jobCover: images.img_three,
         rating: 3.5,
         language: "Eng/Kis/Luh",
-        pageNo: 11,
-        author: "John Wakoli",
+        clients: 11,
+        names: "John Wakoli",
         genre: [
             "Trimmer", "Prunning", "Fencing"
         ],
-        readed: "13k",
+        bid: "13k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
         backgroundColor: "rgba(119,77,143,0.9)",
         navTintColor: "#FFF"
@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
             <View style={{ flex: 1 }}>
                 {/* Header */}
                 <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>My Job</Text>
+                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>Wera Jobs</Text>
 
                     <TouchableOpacity
                         onPress={() => console.log("See More")}
@@ -388,10 +388,10 @@ const Home = ({ navigation }) => {
                         />
 
                         <View style={{ flex: 1, marginLeft: SIZES.radius }}>
-                            {/* Job name and author */}
+                            {/* Job name and names */}
                             <View>
                                 <Text style={{ paddingRight: SIZES.padding, ...FONTS.h2, color: COLORS.white }}>{item.jobName}</Text>
-                                <Text style={{ ...FONTS.h3, color: COLORS.lightGray }}>{item.author}</Text>
+                                <Text style={{ ...FONTS.h3, color: COLORS.lightGray }}>{item.names}</Text>
                             </View>
 
                             {/* Job Info */}
@@ -405,7 +405,7 @@ const Home = ({ navigation }) => {
                                         tintColor: COLORS.lightGray
                                     }}
                                 />
-                                <Text style={{ ...FONTS.body4, color: COLORS.lightGray, paddingHorizontal: SIZES.radius }}>{item.pageNo}</Text>
+                                <Text style={{ ...FONTS.body4, color: COLORS.lightGray, paddingHorizontal: SIZES.radius }}>{item.clients}</Text>
 
                                 <Image
                                     source={icons.bid}
@@ -416,7 +416,7 @@ const Home = ({ navigation }) => {
                                         tintColor: COLORS.lightGray
                                     }}
                                 />
-                                <Text style={{ ...FONTS.body4, color: COLORS.lightGray, paddingHorizontal: SIZES.radius }}>{item.readed}</Text>
+                                <Text style={{ ...FONTS.body4, color: COLORS.lightGray, paddingHorizontal: SIZES.radius }}>{item.bid}</Text>
                             </View>
 
                             {/* Genre */}

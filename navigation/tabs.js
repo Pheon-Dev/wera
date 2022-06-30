@@ -10,7 +10,7 @@ const Tabs = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        style: {
+        tabBarStyle: {
           height: "10%",
           backgroundColor: COLORS.black,
         },

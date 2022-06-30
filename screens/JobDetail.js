@@ -111,10 +111,10 @@ const JobDetail = ({ route, navigation }) => {
                     />
                 </View>
 
-                {/* Job Name and Author */}
+                {/* Job Name and names */}
                 <View style={{ flex: 1.8, alignItems: 'center', justifyContent: 'center' }}>
                     <Text style={{ ...FONTS.h2, color: job.navTintColor }}>{job.jobName}</Text>
-                    <Text style={{ ...FONTS.body3, color: job.navTintColor }}>{job.author}</Text>
+                    <Text style={{ ...FONTS.body3, color: job.navTintColor }}>{job.names}</Text>
                 </View>
 
                 {/* Job Info */}
@@ -137,7 +137,7 @@ const JobDetail = ({ route, navigation }) => {
 
                     {/* Pages */}
                     <View style={{ flex: 1, paddingHorizontal: SIZES.radius, alignItems: 'center' }}>
-                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.pageNo}</Text>
+                        <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.clients}</Text>
                         <Text style={{ ...FONTS.body4, color: COLORS.white }}>Number of Clients</Text>
                     </View>
 
