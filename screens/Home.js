@@ -26,7 +26,7 @@ const Home = ({ navigation }) => {
         point: 200
     }
 
-    const jobOtherWordsForHome = {
+    const jobHouseMaid = {
         id: 1,
         jobName: "Other Words For Home",
         jobCover: images.img_one,
@@ -43,7 +43,7 @@ const Home = ({ navigation }) => {
         navTintColor: "#000"
     }
 
-    const jobTheMetropolis = {
+    const jobGardener = {
         id: 2,
         jobName: "The Metropolis",
         jobCover: images.img_two,
@@ -60,7 +60,7 @@ const Home = ({ navigation }) => {
         navTintColor: "#000"
     }
 
-    const jobTheTinyDragon = {
+    const jobEdgeTrimmer = {
         id: 3,
         jobName: "The Tiny Dragon",
         jobCover: images.img_three,
@@ -79,19 +79,19 @@ const Home = ({ navigation }) => {
 
     const myJobsData = [
         {
-            ...jobOtherWordsForHome,
+            ...jobHouseMaid,
             completion: "75%",
             lastRead: "3d 5h",
 
         },
         {
-            ...jobTheMetropolis,
+            ...jobGardener,
             completion: "23%",
             lastRead: "10d 5h",
 
         },
         {
-            ...jobTheTinyDragon,
+            ...jobEdgeTrimmer,
             completion: "10%",
             lastRead: "1d 2h",
 
@@ -101,23 +101,23 @@ const Home = ({ navigation }) => {
     const categoriesData = [
         {
             id: 1,
-            categoryName: "Best Seller",
+            categoryName: "House Chores",
             jobs: [
-                jobOtherWordsForHome, jobTheMetropolis, jobTheTinyDragon
+                jobHouseMaid, jobGardener, jobEdgeTrimmer
             ]
         },
         {
             id: 2,
-            categoryName: "The Latest",
+            categoryName: "Gardening",
             jobs: [
-                jobTheMetropolis
+                jobGardener
             ]
         },
         {
             id: 3,
-            categoryName: "Coming Soon",
+            categoryName: "Edge Trimming",
             jobs: [
-                jobTheTinyDragon
+                jobEdgeTrimmer
             ]
         },
     ]
@@ -477,10 +477,10 @@ const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
             {/* Header Section */}
-            <View style={{ height: 200 }}>
-                {renderHeader(profile)}
-                {renderButtonSection()}
-            </View>
+            {/* <View style={{ height: 200 }}> */}
+            {/*     {renderHeader(profile)} */}
+            {/*     {renderButtonSection()} */}
+            {/* </View> */}
 
             {/* Body Section */}
             <ScrollView style={{ marginTop: SIZES.radius }}>
