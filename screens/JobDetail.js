@@ -138,7 +138,7 @@ const JobDetail = ({ route, navigation }) => {
                     {/* Pages */}
                     <View style={{ flex: 1, paddingHorizontal: SIZES.radius, alignItems: 'center' }}>
                         <Text style={{ ...FONTS.h3, color: COLORS.white }}>{job.pageNo}</Text>
-                        <Text style={{ ...FONTS.body4, color: COLORS.white }}>Number of Page</Text>
+                        <Text style={{ ...FONTS.body4, color: COLORS.white }}>Number of Clients</Text>
                     </View>
 
                     <LineDivider />

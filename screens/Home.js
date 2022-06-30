@@ -32,7 +32,7 @@ const Home = ({ navigation }) => {
         jobCover: images.img_one,
         rating: 4.5,
         language: "Eng/Kis/Gik",
-        pageNo: 341,
+        pageNo: 34,
         author: "Jasmine Wangui",
         genre: [
             "Maid", "Janitor", "Cook"
@@ -49,7 +49,7 @@ const Home = ({ navigation }) => {
         jobCover: images.img_two,
         rating: 4.1,
         language: "Eng/Kis/Kal",
-        pageNo: 272,
+        pageNo: 27,
         author: "Jennifer Tanui",
         genre: [
             "Watering", "Weeding"
@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
         jobCover: images.img_three,
         rating: 3.5,
         language: "Eng/Kis/Luh",
-        pageNo: 110,
+        pageNo: 11,
         author: "John Wakoli",
         genre: [
             "Trimmer", "Prunning", "Fencing"
@@ -408,7 +408,7 @@ const Home = ({ navigation }) => {
                                 <Text style={{ ...FONTS.body4, color: COLORS.lightGray, paddingHorizontal: SIZES.radius }}>{item.pageNo}</Text>
 
                                 <Image
-                                    source={icons.read_icon}
+                                    source={icons.bid}
                                     resizeMode="contain"
                                     style={{
                                         width: 20,
