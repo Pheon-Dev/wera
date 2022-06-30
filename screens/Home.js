@@ -28,14 +28,14 @@ const Home = ({ navigation }) => {
 
     const jobHouseMaid = {
         id: 1,
-        jobName: "Other Words For Home",
+        jobName: "House Cleaning",
         jobCover: images.img_one,
         rating: 4.5,
-        language: "Eng",
+        language: "Eng/Kis/Gik",
         pageNo: 341,
-        author: "Jasmine Warga",
+        author: "Jasmine Wangui",
         genre: [
-            "Romance", "Adventure", "Drama"
+            "Maid", "Janitor", "Cook"
         ],
         readed: "12k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
@@ -45,14 +45,14 @@ const Home = ({ navigation }) => {
 
     const jobGardener = {
         id: 2,
-        jobName: "The Metropolis",
+        jobName: "Nursery & Gardener",
         jobCover: images.img_two,
         rating: 4.1,
-        language: "Eng",
+        language: "Eng/Kis/Kal",
         pageNo: 272,
-        author: "Seith Fried",
+        author: "Jennifer Tanui",
         genre: [
-            "Adventure", "Drama"
+            "Watering", "Weeding"
         ],
         readed: "13k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
@@ -62,14 +62,14 @@ const Home = ({ navigation }) => {
 
     const jobEdgeTrimmer = {
         id: 3,
-        jobName: "The Tiny Dragon",
+        jobName: "Edge Trimmer",
         jobCover: images.img_three,
         rating: 3.5,
-        language: "Eng",
+        language: "Eng/Kis/Luh",
         pageNo: 110,
-        author: "Ana C Bouvier",
+        author: "John Wakoli",
         genre: [
-            "Drama", "Adventure", "Romance"
+            "Trimmer", "Prunning", "Fencing"
         ],
         readed: "13k",
         description: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
