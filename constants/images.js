@@ -1,11 +1,13 @@
-export const otherWordsForHome = require("../assets/images/other_words_for_home.jpg");
-export const theMetropolist = require("../assets/images/the_metropolist.jpg");
-export const theTinyDragon = require("../assets/images/the_tiny_dragon.jpg");
-export const underland = require("../assets/images/underland.jpg");
+export const img_one = require("../assets/images/img_one.jpg");
+export const img_two = require("../assets/images/img_two.jpg");
+export const img_three = require("../assets/images/img_three.jpg");
+export const img_four = require("../assets/images/img_four.jpg");
+export const img_five = require("../assets/images/img_five.jpg");
 
 export default {
-    otherWordsForHome,
-    theMetropolist,
-    theTinyDragon,
-    underland
+    img_one,
+    img_two,
+    img_three,
+    img_four,
+    img_five
 }
