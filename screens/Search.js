@@ -91,6 +91,39 @@ const Home = ({ navigation }) => {
     const [selectedCategory, setSelectedCategory] = React.useState(1);
 
 
+    function renderCategoryHeader() {
+
+        const renderItem = ({ item }) => {
+            return (
+                <TouchableOpacity
+                    style={{ flex: 1, marginRight: SIZES.padding }}
+                    onPress={() => setSelectedCategory(item.id)}
+                >
+                    {
+                        selectedCategory == item.id &&
+                        <Text style={{ ...FONTS.h2, color: COLORS.white }}>{item.categoryName}</Text>
+                    }
+                    {
+                        selectedCategory != item.id &&
+                        <Text style={{ ...FONTS.h2, color: COLORS.lightGray }}>{item.categoryName}</Text>
+                    }
+                </TouchableOpacity>
+            )
+        }
+
+        return (
+            <View style={{ flex: 1, paddingLeft: SIZES.padding }}>
+                <FlatList
+                    data={categories}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={renderItem}
+                    keyExtractor={item => `${item.id}`}
+                    horizontal
+                />
+            </View>
+        )
+    }
+
     function renderCategoryData() {
         var jobs = []
 
@@ -220,9 +253,9 @@ const Home = ({ navigation }) => {
 
                 {/* Categories Section */}
                 <View style={{ marginTop: SIZES.padding }}>
-                    {/* <View> */}
-                    {/*     {renderCategoryHeader()} */}
-                    {/* </View> */}
+                    <View>
+                        {renderCategoryHeader()}
+                    </View>
                     <View>
                         {renderCategoryData()}
                     </View>
