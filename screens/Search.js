@@ -11,20 +11,7 @@ import {
 
 import { COLORS, FONTS, SIZES, icons, images } from '../constants';
 
-const LineDivider = () => {
-    return (
-        <View style={{ width: 1, paddingVertical: 18 }}>
-            <View style={{ flex: 1, borderLeftColor: COLORS.lightGray, borderLeftWidth: 1 }}></View>
-        </View>
-    )
-}
-
 const Home = ({ navigation }) => {
-
-    const profileData = {
-        name: 'Username',
-        point: 200
-    }
 
     const jobHouseMaid = {
         id: 1,
@@ -77,27 +64,6 @@ const Home = ({ navigation }) => {
         navTintColor: "#FFF"
     }
 
-    const myJobsData = [
-        {
-            ...jobHouseMaid,
-            completion: "75%",
-            lastRead: "3d 5h",
-
-        },
-        {
-            ...jobGardener,
-            completion: "23%",
-            lastRead: "10d 5h",
-
-        },
-        {
-            ...jobEdgeTrimmer,
-            completion: "10%",
-            lastRead: "1d 2h",
-
-        }
-    ]
-
     const categoriesData = [
         {
             id: 1,
@@ -121,123 +87,9 @@ const Home = ({ navigation }) => {
             ]
         },
     ]
-
-    const [profile, setProfile] = React.useState(profileData);
-    const [myJobs, setMyJobs] = React.useState(myJobsData);
     const [categories, setCategories] = React.useState(categoriesData);
     const [selectedCategory, setSelectedCategory] = React.useState(1);
 
-    function renderMyJobSection(myJobs) {
-
-        const renderItem = ({ item, index }) => {
-            return (
-                <TouchableOpacity
-                    style={{
-                        flex: 1,
-                        marginLeft: index == 0 ? SIZES.padding : 0,
-                        marginRight: SIZES.radius
-                    }}
-                    onPress={() => navigation.navigate("JobDetail", {
-                        job: item
-                    })}
-                >
-                    {/* Job Cover */}
-                    <Image
-                        source={item.jobCover}
-                        resizeMode="cover"
-                        style={{
-                            width: 180,
-                            height: 250,
-                            borderRadius: 20
-                        }}
-                    />
-
-                    {/* Job Info */}
-                    <View style={{ marginTop: SIZES.radius, flexDirection: 'row', alignItems: 'center' }}>
-                        <Image
-                            source={icons.clock_icon}
-                            style={{
-                                width: 20,
-                                height: 20,
-                                tintColor: COLORS.lightGray
-                            }}
-                        />
-                        <Text style={{ marginLeft: 5, ...FONTS.body3, color: COLORS.lightGray }}>{item.lastRead}</Text>
-
-                        <Image
-                            source={icons.page_icon}
-                            style={{
-                                marginLeft: SIZES.radius,
-                                width: 20,
-                                height: 20,
-                                tintColor: COLORS.lightGray
-                            }}
-                        />
-                        <Text style={{ marginLeft: 5, ...FONTS.body3, color: COLORS.lightGray }}>{item.completion}</Text>
-                    </View>
-                </TouchableOpacity>
-            )
-        }
-
-        return (
-            <View style={{ flex: 1 }}>
-                {/* Header */}
-                <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>Wera Jobs</Text>
-
-                    <TouchableOpacity
-                        onPress={() => console.log("See More")}
-                    >
-                        <Text style={{ ...FONTS.body3, color: COLORS.lightGray, alignSelf: 'flex-start', textDecorationLine: 'underline' }}>see more</Text>
-                    </TouchableOpacity>
-                </View>
-
-                {/* Jobs */}
-                <View style={{ flex: 1, marginTop: SIZES.padding }}>
-                    <FlatList
-                        data={myJobs}
-                        renderItem={renderItem}
-                        keyExtractor={item => `${item.id}`}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-                </View>
-            </View>
-        )
-    }
-
-    function renderCategoryHeader() {
-
-        const renderItem = ({ item }) => {
-            return (
-                <TouchableOpacity
-                    style={{ flex: 1, marginRight: SIZES.padding }}
-                    onPress={() => setSelectedCategory(item.id)}
-                >
-                    {
-                        selectedCategory == item.id &&
-                        <Text style={{ ...FONTS.h2, color: COLORS.white }}>{item.categoryName}</Text>
-                    }
-                    {
-                        selectedCategory != item.id &&
-                        <Text style={{ ...FONTS.h2, color: COLORS.lightGray }}>{item.categoryName}</Text>
-                    }
-                </TouchableOpacity>
-            )
-        }
-
-        return (
-            <View style={{ flex: 1, paddingLeft: SIZES.padding }}>
-                <FlatList
-                    data={categories}
-                    showsHorizontalScrollIndicator={false}
-                    renderItem={renderItem}
-                    keyExtractor={item => `${item.id}`}
-                    horizontal
-                />
-            </View>
-        )
-    }
 
     function renderCategoryData() {
         var jobs = []
@@ -362,15 +214,15 @@ const Home = ({ navigation }) => {
             {/* Body Section */}
             <ScrollView style={{ marginTop: SIZES.radius }}>
                 {/* Jobs Section */}
-                <View>
-                    {renderMyJobSection(myJobs)}
-                </View>
+                {/* <View> */}
+                {/*     {renderMyJobSection(myJobs)} */}
+                {/* </View> */}
 
                 {/* Categories Section */}
                 <View style={{ marginTop: SIZES.padding }}>
-                    <View>
-                        {renderCategoryHeader()}
-                    </View>
+                    {/* <View> */}
+                    {/*     {renderCategoryHeader()} */}
+                    {/* </View> */}
                     <View>
                         {renderCategoryData()}
                     </View>
@@ -381,3 +233,4 @@ const Home = ({ navigation }) => {
 }
 
 export default Home;
+

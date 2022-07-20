@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
-import { JobDetail } from "./screens";
+import { JobDetail, Notifications, Search, Settings } from "./screens";
 import Tabs from "./navigation/tabs";
 import { useFonts } from 'expo-font';
 
@@ -39,6 +39,9 @@ const App = () => {
 
                 {/* Screens */}
                 <Stack.Screen name="JobDetail" component={JobDetail} options={{ headerShown: false }} />
+                <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: false }} />
+                <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
+                <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

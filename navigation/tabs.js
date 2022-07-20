@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home } from "../screens";
+import { Home, Notifications, Search, Settings } from "../screens";
 import { icons, COLORS } from "../constants";
 
 const Tab = createBottomTabNavigator();
@@ -76,9 +76,9 @@ const Tabs = () => {
       })}
     >
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Search" component={Home} />
-      <Tab.Screen name="Notification" component={Home} />
-      <Tab.Screen name="Setting" component={Home} />
+      <Tab.Screen name="Search" component={Search} />
+      <Tab.Screen name="Notification" component={Notifications} />
+      <Tab.Screen name="Setting" component={Settings} />
     </Tab.Navigator>
   );
 };
