@@ -12,3 +12,8 @@ web-build/
 
 # macOS
 .DS_Store
+
+firebase/config.js
+database.rules.json
+firebase.json
+firestore.rules
