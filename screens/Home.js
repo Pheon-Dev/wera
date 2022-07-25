@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import {
     SafeAreaView,
     View,
@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { COLORS, FONTS, SIZES, icons, images } from '../constants';
+// import {db} from "../firebase/config";
 
 const LineDivider = () => {
     return (
@@ -20,6 +21,27 @@ const LineDivider = () => {
 }
 
 const Home = ({ navigation }) => {
+  const [jobs, setJobs] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(true);
+  //
+  // const fetchJobs = async() => {
+  //   const req = await firestore.collection("jobs").orderBy("postedOn", "desc").get();
+  //   const tempJobs = req.docs.map((job) => ({...job.data(), id: id, postedOn: job.data().postedOn.toDate(),}));
+  //   setJobs(tempJobs);
+  //   setLoading(false);
+  // }
+  //
+  // const postJob = async jobDetails => {
+  //   await firestore.collection("jobs").add({...jobDetails, postedOn: app.firestore.FieldValue.serverTimestamp()});
+  //   fetchJobs();
+  // }
+  //
+  // useEffect(() => {
+  //   fetchJobs();
+  // }, []) ;
+  //
+  // console.log(jobs)
 
     const profileData = {
         name: 'Username',
