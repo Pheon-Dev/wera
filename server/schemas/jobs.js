@@ -4,6 +4,16 @@ export default {
   type: "document",
   fields: [
     {
+      name: "firstName",
+      title: "First Name",
+      type: "string",
+    },
+    {
+      name: "lastName",
+      title: "Last Name",
+      type: "string",
+    },
+    {
       name: "jobID",
       title: "Job ID",
       type: "string",
@@ -16,16 +26,6 @@ export default {
     {
       name: "location",
       title: "Location",
-      type: "string",
-    },
-    {
-      name: "firstName",
-      title: "First Name",
-      type: "string",
-    },
-    {
-      name: "lastName",
-      title: "Last Name",
       type: "string",
     },
     {
@@ -76,6 +76,11 @@ export default {
     {
       name: "emailAddress",
       title: "Email Address",
+      type: "string",
+    },
+    {
+      name: "description",
+      title: "Description",
       type: "string",
     },
     {
