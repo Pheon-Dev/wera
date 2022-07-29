@@ -47,57 +47,20 @@ const Home = () => {
     });
   }, []);
 
-  function renderItem(name) {
+  function renderWorkers(worker, index) {
     return (
-
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {name}
-            </Text>
-          </View>
-    )
+      <View key={index}>
+        <Text style={{ ...FONTS.h3, color: COLORS.black }}>
+          {worker.date + "-" + worker.firstName + " " + worker.lastName}
+        </Text>
+      </View>
+    );
   }
 
   return (
     <View>
       <Text style={{ ...FONTS.h3, color: COLORS.black }}>Good Morning</Text>
-      <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-        {workers.map((w, index) => w.date)}
-      </Text>
-      {workers.map((worker) => {
-        <>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ ...FONTS.h3, color: COLORS.black }}>
-              {worker.firstName}
-            </Text>
-          </View>
-        </>;
-      })}
+      {workers.map((worker, index) => renderWorkers(worker, index))}
     </View>
   );
 };
